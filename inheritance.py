@@ -117,4 +117,52 @@ class SmartPhone(Phone):
 s=SmartPhone("Android", 2)
 s.brand
 
+# child can't access private members of the class
+
+class Phone:
+    def __init__(self, price, brand, camera):
+        print ("Inside phone constructor")
+        self.__price = price
+        self.brand = brand
+        self.camera = camera
+
+    #getter
+    def show(self):
+        print (self.__price)
+         #getter
+    # def__ show(self):   => it cant be accessed by child class
+    #     print (self.__price)
+
+class SmartPhone(Phone):
+    def check(self):  #cant acces private var
+        print(self.__price) 
+
+s=SmartPhone(20000, "Apple", 13)
+s.show() #getting private thing by getter
+s.check() #Error
+print(s.price)
+
+
+
+
+
+
+class Parent:
+
+    def __init__(self,num):
+        self.__num=num
+
+    def get_num(self):  
+        return self.__num
+
+class Child(Parent):
+
+    def show(self):
+        print("This is in child class")
+
+son=Child(100)
+print(son.get_num())
+son.show()
+#Getting private parent method in child class object using getter method.
+
 
