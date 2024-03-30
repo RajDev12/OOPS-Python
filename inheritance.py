@@ -166,3 +166,59 @@ son.show()
 #Getting private parent method in child class object using getter method.
 
 
+class Parent:
+
+    def __init__(self,num):
+        self.__num=num
+
+    def get_num(self):
+        return self.__num
+
+class Child(Parent):
+
+    def __init__(self,val,num):
+        self.__val=val
+
+    def get_val(self):
+        return self.__val
+
+son=Child(100,10)
+print("Child: Val:",son.get_val())
+print("Parent: Num:",son.get_num()) #variable never got created
+
+
+class A:
+    def __init__(self):
+        self.var1=100
+
+    def display1(self,var1): #argument variable and the variable used inside method are different
+        print("class A :", self.var1) #self.var1 taking value from constructor
+class B(A):
+
+    def display2(self,var1):
+        print("class B :", self.var1)
+
+obj=B()
+obj.display1(200)
+
+
+
+class A:
+    def __init__(self):
+        self.var1=100
+
+    def display1(self,var1): #argument variable and the variable used inside method are different
+        self.var1=var1
+        print("class A :", self.var1) #self.var1 taking value from argument by above line
+class B(A):
+
+    def display2(self,var1):
+        print("class B :", self.var1)
+
+obj=B()
+obj.display1(200)
+
+
+
+
+
