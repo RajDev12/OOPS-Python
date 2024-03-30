@@ -1,4 +1,4 @@
-# Method Overriding
+# Method Overriding=Child class can override the methods and attributes of parent class
 #when both parent and child class have same method
 #object will call that class method whose object it is
 class Phone:
