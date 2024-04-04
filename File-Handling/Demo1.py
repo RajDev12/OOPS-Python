@@ -12,18 +12,28 @@
 
 # 1. Writing to a Text File
 # CAse 1= if the file is not created
-f=open("sample.txt", 'w')
-f.write('Hello World')
-f.write('Stop the writing and close')
-f.close()
-# f.write("cant Write into file after closing the file")
-#write multiples line =if the file is NOT present
-f=open("sample1.txt", 'w')
-f.write('Hi how are you?')   #15=RETURNS THE NUMBER OF CHARACTER INSERTED
-f.write('\nWhere you from?')   #16
-f.close()
+# f=open("sample.txt", 'w')
+# f.write('Hello World')
+# f.write('Stop the writing and close')
+# f.close()
+# # f.write("cant Write into file after closing the file")
+# #write multiples line =if the file is NOT present
+# f=open("sample1.txt", 'w')
+# f.write('Hi how are you?')   #15=RETURNS THE NUMBER OF CHARACTER INSERTED
+# f.write('\nWhere you from?')   #16
+# f.close()
 
-#IF THE FILE IS PRESENT
-f=open("sample.txt",'w')
-f.write('Replaced Old content')
+# #IF THE FILE IS PRESENT
+# f=open("sample.txt",'w')
+# f.write('Replaced Old content') 
+# f.close()
+
+#With open() command python interpreter moves the file from ROM to Ram in  Buffer format
+#Buffer is a way of reading each character one oy one to perform read and write operation
+#With close() file puts back to the ROM
+
+
+#Introducing append mode to not erase old content from the file
+f=open("File-Handling\sample1.txt", 'a')
+f.write('Use append to insert at the end of old content')
 f.close()
