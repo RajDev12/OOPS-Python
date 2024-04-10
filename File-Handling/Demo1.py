@@ -42,7 +42,7 @@
 
 
 ##Passing  a multiple lines inside a list
-L=['hi\n','how are you\n','what the hell'] #if we dont give the \n then it willl print all the ellement of list in t
+L=['hi\n','how are you\n','what the hell'] #if we dont give the \n then it willl print all the ellement of list in same line
 # f=open('File-Handling\sample.txt','w')
 # f.writelines(L)
 # f.close() 
@@ -79,9 +79,18 @@ L=['hi\n','how are you\n','what the hell'] #if we dont give the \n then it willl
 
 
 
-##Using Context Manager(With) to open a file
-with open('sample.txt','w') as f:
-    f.write("with open")
+##Using Context Manager(With) to open a file 
+#1. It's a good idea to close a file after usage as it will free up the resources
+#2. If we dont close it, garbage collector would close it
+#3. with keyword closes the file as soon as the usage is over
+# with open('sample.txt','w') as f:
+#     f.write("with open")
+
+
+print("Hello", end=" ")
+print("world")
+
+
     
 
 
