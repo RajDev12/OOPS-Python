@@ -87,8 +87,7 @@ L=['hi\n','how are you\n','what the hell'] #if we dont give the \n then it willl
 #     f.write("with open")
 
 
-print("Hello", end=" ")
-print("world")
+
 
 
     
